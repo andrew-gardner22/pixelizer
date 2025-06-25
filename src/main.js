@@ -1,5 +1,5 @@
 //create object
-const px = new pixelit({ from: document.getElementById("pixelitimg") });
+const px = new Pixelizer({ from: document.getElementById("Pixelizerimg") });
 
 //stuff for webpage functionality
 let paletteList = [
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //create element
       //document.getElementById('teste').src = img.src;
       px.setFromImgSource(img.src);
-      pixelit();
+      Pixelizer();
       //.pixelate()
       //.convertGrayscale()
       //.convertPalette();
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   //function to apply effects
-  const pixelit = () => {
+  const Pixelizer = () => {
     document.querySelector(".loader").classList.toggle("active");
     setTimeout(() => {
       document.querySelector(".loader").classList.toggle("active");
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
     onChange: (info) => {
       currentPalette = info.value;
       palette.checked = true;
-      pixelit();
+      Pixelizer();
       //console.log(info)
     },
   });
@@ -293,20 +293,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const blocksize = document.querySelector("#blocksize");
   blocksize.addEventListener("change", function (e) {
     document.querySelector("#blockvalue").innerText = this.value;
-    pixelit();
+    Pixelizer();
   });
   //greyscale
   const greyscale = document.querySelector("#greyscale");
-  greyscale.addEventListener("change", pixelit);
+  greyscale.addEventListener("change", Pixelizer);
   //palette
   const palette = document.querySelector("#palette");
-  palette.addEventListener("change", pixelit);
+  palette.addEventListener("change", Pixelizer);
   //maxheight
   const maxheight = document.querySelector("#maxheight");
-  maxheight.addEventListener("change", pixelit);
+  maxheight.addEventListener("change", Pixelizer);
   //maxwidth
   const maxwidth = document.querySelector("#maxwidth");
-  maxwidth.addEventListener("change", pixelit);
+  maxwidth.addEventListener("change", Pixelizer);
   //change palette deprecated
   /*
   const changePalette = document.querySelector("#changepalette");
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentPalette > 0 ? currentPalette-- : (currentPalette = maxPalette - 1);
     makePaletteGradient();
     palette.checked = true;
-    pixelit();
+    Pixelizer();
   });
   */
   //downloadimage options
@@ -325,6 +325,6 @@ document.addEventListener("DOMContentLoaded", function () {
     px.saveImage();
   });
 
-  //run on page boot to pixelit default image
-  pixelit();
+  //run on page boot to Pixelizer default image
+  Pixelizer();
 });
