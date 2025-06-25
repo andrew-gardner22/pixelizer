@@ -7,7 +7,7 @@ const rename = require("gulp-rename");
 gulp.task("servejs", function () {
   //*** direct copy
   gulp.src(["src/main.js","src/tests.js"]).pipe(gulp.dest("docs/js/"));
-  gulp.src("src/pixelit.js").pipe(gulp.dest("dist/"));
+  gulp.src("src/Pixelizer.js").pipe(gulp.dest("dist/"));
   //*** minify and transpile
   gulp
     .src("src/main.js")
@@ -16,13 +16,13 @@ gulp.task("servejs", function () {
     .pipe(rename("main.min.js"))
     .pipe(gulp.dest("docs/js/"));
   gulp
-    .src("dist/pixelit.min.js")
+    .src("dist/Pixelizer.min.js")
     .pipe(gulp.dest("docs/js/"));
   return gulp
-    .src("src/pixelit.js")
+    .src("src/Pixelizer.js")
     .pipe(babel({ presets: ["@babel/env"] }))
     .pipe(uglify())
-    .pipe(rename("pixelit.min.js"))
+    .pipe(rename("Pixelizer.min.js"))
     .pipe(gulp.dest("dist/"));
 });
 
