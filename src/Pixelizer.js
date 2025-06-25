@@ -1,14 +1,14 @@
 /**
- * pixelit - convert an image to Pixel Art, with/out grayscale and based on a color palette.
- * @author José Moreira @ <https://github.com/giventofly/pixelit>
+ * Pixelizer - convert an image to Pixel Art, with/out grayscale and based on a color palette.
+ * @author José Moreira @ <https://github.com/giventofly/Pixelizer>
  **/
 
-class pixelit {
+class Pixelizer {
   constructor(config = {}) {
     //target for canvas
-    this.drawto = config.to || document.getElementById("pixelitcanvas");
+    this.drawto = config.to || document.getElementById("Pixelizercanvas");
     //origin of uploaded image/src img
-    this.drawfrom = config.from || document.getElementById("pixelitimg");
+    this.drawfrom = config.from || document.getElementById("Pixelizerimg");
     //hide image element
     this.hideFromImg();
     //range between 0 to 100
