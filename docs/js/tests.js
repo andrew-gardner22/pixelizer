@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     mainElement.appendChild(makeBlock(size));
     document.getElementById("imagesource" + size).onload = ()=>{
-      const px = new pixelit({
+      const px = new Pixelizer({
         from: document.getElementById("imagesource" + size),
         to: document.getElementById("image" + size),
         scale: 12
