@@ -17,7 +17,7 @@
       <a href="#tryit" class="btn call">try it</a>
       <a href="#examples" class="btn ">examples</a>
       <a href="#docs" class="btn">Documentation</a>
-      <a href="https://github.com/giventofly/pixelit" class="btn"  rel="nofollow noopener" target="_blank" title="github repository">github</a>
+      <a href="https://github.com/giventofly/Pixelizer" class="btn"  rel="nofollow noopener" target="_blank" title="github repository">github</a>
    </div>
   
   </header>
@@ -97,7 +97,7 @@
    
   </div>
  
-  <canvas id="pixelitcanvas"></canvas>
+  <canvas id="Pixelizercanvas"></canvas>
   <div class="tip">
     <p>Did you find this real useful or just want to give some tip? <a href="https://www.buymeacoffee.com/giventofly" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee"  ></a> or you can can also send me some ADA: addr1q8kc33nwrysx9wc4znm9xdlvst7eq87ear0jx2n23zzjna7su5y05wag5gtgalm53gxjg4hgv3jayjc3msv57lu56psqa07hdp</p>
    </div>
@@ -109,14 +109,14 @@
    <div class="wrap withmargins">
   <h2>Documentation</h2>
   <h3>Quick usage</h3>
-  <p>To use the quick default configuration you need an element from where to draw the image and canvas element with the id pixelitcanvas. Then load the pixelit.js script and apply it on an image.</p>
+  <p>To use the quick default configuration you need an element from where to draw the image and canvas element with the id Pixelizercanvas. Then load the Pixelizer.js script and apply it on an image.</p>
   <pre>
-&lt;img src="assets/sky.jpg"  id="pixelitimg" alt=""&gt;
-&lt;canvas id="pixelitcanvas"&gt;&lt;/canvas&gt;
-&lt;script src="dist/pixelit.js"&gt;&lt;/script&gt;
+&lt;img src="assets/sky.jpg"  id="Pixelizerimg" alt=""&gt;
+&lt;canvas id="Pixelizercanvas"&gt;&lt;/canvas&gt;
+&lt;script src="dist/Pixelizer.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   //create object
-  const px = new pixelit();
+  const px = new Pixelizer();
   px.draw().pixelate();
 &lt;/script</pre>
 
@@ -125,8 +125,8 @@
   <p>You can pass some options when creating the instance (you can alter them later using the api methods).</p>
   <pre>
 config = {
-  to : elem, defaults to document.getElementById("pixelitcanvas")
-  from : elem, defaults to document.getElementById("pixelitimg")
+  to : elem, defaults to document.getElementById("Pixelizercanvas")
+  from : elem, defaults to document.getElementById("Pixelizerimg")
   scale : int from 0-50, defaults to 8
   palette : [[r,g,b]], defaults to a fixed palette
   maxHeight: int, defaults to null
@@ -160,12 +160,12 @@ config = {
   
 </section>
  <section class="links"><div class="wrap">
-   <a href="https://github.com/giventofly/pixelit" class="btn call github"  rel="nofollow noopener" target="_blank" title="github repository">github</a>
+   <a href="https://github.com/giventofly/Pixelizer" class="btn call github"  rel="nofollow noopener" target="_blank" title="github repository">github</a>
    <a href="https://twitter.com/heyzeto" class="btn call twitter" rel="nofollow noopener" title="twitter" target="_blank">twitter</a>
   </div></section>
-  <img src="assets/sky.jpg"  id="pixelitimg" alt="">
+  <img src="assets/sky.jpg"  id="Pixelizerimg" alt="">
   <!--<img style="visibility: hidden;" id="pixlimg" alt="">  -->
-  <script src="js/pixelit.min.js"></script>
+  <script src="js/Pixelizer.min.js"></script>
   <script src="js/slim.select.min.js"></script>
   <script src="js/main.min.js?v1"></script>
   <!-- loader-->
